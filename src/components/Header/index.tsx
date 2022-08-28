@@ -1,7 +1,10 @@
 import { Box, BoxProps, Button, ButtonProps, styled, Typography, TypographyProps } from '@mui/material';
 import Logo from 'assets/images/logo-example.svg';
 import { headerHeight } from 'consts';
+import { useLocation } from 'react-router-dom';
+import { addSlashPrefixToString } from 'helpers';
 import React from 'react';
+import { loginSuffix } from 'routes/routes-conts';
 
 const Container = styled(Box)<BoxProps>(() => ({
   height: headerHeight,
@@ -54,6 +57,7 @@ const Divider = styled(Box)<BoxProps>({
 });
 
 export const Header = () => {
+
   return (
     <Container>
       <LogoWrapper>
@@ -63,6 +67,7 @@ export const Header = () => {
         <HeaderTitle>RM</HeaderTitle>
       </LogoWrapper>
       <Divider />
+
       <EmailWrapper>
         <Email>Logged in as @username</Email>
         <LogoutBnt>Logout</LogoutBnt>

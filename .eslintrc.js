@@ -28,6 +28,7 @@ module.exports = {
     semi: 0,
     '@typescript-eslint/ban-ts-comment': 0,
     'spaced-comment': 0,
+    'prettier/prettier': 0,
     camelcase: 0,
   },
 };

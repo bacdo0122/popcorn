@@ -36,13 +36,21 @@ const Layout: React.FC<Props> = ({ children }) => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        alignItem:'center',
+        justifyContent:'center',
         height: '100vh',
+        backgroundColor: '#363740'
       }}
     >
       {location.pathname !== addSlashPrefixToString(notFoundPageSuffix) && (
         <>
-          <Header />
+          {location.pathname !== addSlashPrefixToString(loginSuffix) && 
+          <>
+          <Header /> 
           <Divider />
+          </>
+          }
+          
         </>
       )}
       {location.pathname === addSlashPrefixToString(loginSuffix) ||
